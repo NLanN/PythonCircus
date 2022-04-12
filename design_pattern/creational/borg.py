@@ -1,4 +1,4 @@
-class Borg:
+class Borg(object):
     _shared_state = {}
 
     def __init__(self):
