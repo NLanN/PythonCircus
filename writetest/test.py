@@ -9,10 +9,10 @@ class ApplicationTest(unittest.TestCase):
 
     def test_parent(self):
         with patch('func.Application.child') as mock_child:
-            # self.app.child = mock_child
-            mock_child.return_value = 9
+            mock_child.return_value = None
+            self.parent()
             self.app.parent(9)
-            mock_child.assert_called_once_with(9)
+            # mock_child.assert_called_once_with(9)
 
 
 if __name__ == '__main__':
